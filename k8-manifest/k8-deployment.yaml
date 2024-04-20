@@ -1,10 +1,10 @@
-
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tetris-deployment
 spec:
-  replicas: 2 # You can adjust the number of replicas as needed
+  replicas: 2
   selector:
     matchLabels:
       app: tetris
@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: tetris
-          image: adijaiswal/tetris:v1 # Replace with the actual image tag
+          image: adijaiswal/tetris:v1
           ports:
-            - containerPort: 80 # Replace with the port your Tetris game listens on
+            - containerPort: 80
+
 
